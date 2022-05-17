@@ -44,14 +44,14 @@ let render = () => {
     genderTD.textContent = gender.value;
     TR.append(genderTD)
 
-    del.className = ('btn btn-warning bg-warning mb-2')
+    del.className = ('btn btn-warning bg-warning mb-2 me-2')
     del.textContent = 'delete'
     TR.append(del)
     del.addEventListener("click", () => {
         TR.remove();
     })
 
-    edit.className = ('btn btn-success')
+    edit.className = ('btn btn-success bg-success')
     edit.textContent = 'edit'
     TR.append(edit)
 
@@ -82,6 +82,5 @@ formik.addEventListener("submit", function(event) {
     lastname.value = ''
     group.value = ''
 
-    render()
     storage.setItem("keys", JSON.stringify(data))
 });
